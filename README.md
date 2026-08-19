@@ -1,6 +1,6 @@
 # spam detector
 
-This project was for me to stop writing models from scratch and actually see what sklearn can do when pushed. I’ve always had a love-hate relationship with high-level frameworks. When you just instantiate a pipeline, call .fit(), and let scikit-learn handle the heavy lifting, you lose sight of what’s happening under the hood—the math, the feature extraction, the probability updates and all the edge cases get swallowed by abstraction. Having spent time manually building machine learning algorithms and neural networks, moving to a single .fit() call felt almost suspiciously easy, like missing out on the fun part.
+This project was for me to stop writing models from scratch and actually see what sklearn can do when pushed. I’ve always had a love-hate relationship with high-level frameworks. When you just instantiate a pipeline, call .fit() and let scikit-learn handle the heavy lifting, you lose sight of what’s happening under the hood—the math, the feature extraction, the probability updates and all the edge cases get swallowed by abstraction. Having spent time manually building machine learning algorithms and neural networks, moving to a single .fit() call felt almost suspiciously easy, like missing out on the fun part.
 
 My usual habit is forcing myself through the most tedious implementation details first, so switching to a clean library setup felt backwards. But this time around, the goal wasn to build something fast, clean and resilient.
 
