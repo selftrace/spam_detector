@@ -10,6 +10,6 @@ The core ML part is a standard combo: a sublinear TF-IDF vectorizer paired with 
 
 Since I didn't want the code breaking on real-world edge cases, I spent most of my effort making the pipeline unbreakable rather than tweaking hyperparameters. A lot of online examples assume your input CSV is perfectly formatted UTF-8 but real datasets rarely are. I wrote an automated fallback system that scans through utf-8, latin-1, iso-8859-1 and cp1252 until the data loads without error. I also added handling for extra dirty columns, empty string payloads and bad data types during live predictions.
 
-Instead of just spitting out a single accuracy metric, the predict() method returns structured JSON containing the predicted label, a boolean flag and a confidence score. Watching naive bayes assign crisp probability bounds to incoming messages—and staying rock solid even when handed total gibberish or empty inputs—was easily the best part of the build.
+Instead of just spitting out a single accuracy metric, the predict() method returns structured JSON containing the predicted label, a boolean flag and a confidence score. Watching naive bayes assign crisp probability bounds to incoming messages and staying rock solid even when handed total gibberish or empty inputs was easily the best part of the build.
 
 Keeping the whole project modular, fully error-checked and self-contained in under 200 lines turned out to be a really satisfying trade-off between low-level control and framework efficiency.
